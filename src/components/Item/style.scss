@@ -1,0 +1,39 @@
+
+.item {
+    display: flex;
+    margin: 7px 0;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 20px;
+    transition: background 250ms ease-in-out;
+    padding: 0.5em 1em;
+    background-color: white;
+    border-radius: 0.5em;
+
+    .completed {
+        opacity: 0.3;
+    }
+
+    &:hover {
+        background: #e1f5fe;
+    }
+
+    p {
+        margin: 0;
+        width: 100%;
+        padding: 0 1em;
+        text-align: left;
+    }
+
+    .btn-del {
+        color: #ef9a9a;
+        cursor: pointer;
+        height: 15px;
+        line-height: 12px;
+        width: 15px;
+        border-radius: 50%;
+        text-align: center;
+        font-size: 12px;
+    }
+}
