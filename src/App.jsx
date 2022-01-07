@@ -4,7 +4,7 @@ import TodoHeader from './components/Header';
 import TodoList from './components/List';
 
 function App() {
-  const [todos, setTodos] = useState([]);
+  const [todos, setTodos] = useState(JSON.parse(localStorage.getItem('todos')) || []);
 
   const addTodo = (newTodo) => {
     if (!newTodo.title) {
