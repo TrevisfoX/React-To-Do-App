@@ -1,16 +1,18 @@
-import { useState, useEffect } from 'react';
-import './App.scss';
-import TodoHeader from './components/Header';
-import TodoList from './components/List';
+import { useState, useEffect } from "react";
+import "./App.scss";
+import TodoHeader from "./components/Header";
+import TodoList from "./components/List";
 
 function App() {
-  const [todos, setTodos] = useState(JSON.parse(localStorage.getItem('todos')) || []);
+  const [todos, setTodos] = useState(
+    JSON.parse(localStorage.getItem("todos")) || []
+  );
 
   const addTodo = (newTodo) => {
     if (!newTodo.title) {
       return;
     }
-    setTodos([...todos, newTodo]);       
+    setTodos([...todos, newTodo]);
   };
 
   const removeTodo = (todoId) => {
@@ -40,14 +42,14 @@ function App() {
   }, []);
 
   useEffect(() => {
-    localStorage.setItem('todos', JSON.stringify(todos));
+    localStorage.setItem("todos", JSON.stringify(todos));
   }, [todos]);
-  
+
   return (
-    <div className='wrappeer'>         
-      <TodoHeader todos={todos} addTodo={addTodo}/>
-      <TodoList todos={todos} removeTodo={removeTodo} editTodo={editTodo}/>
-     </div>
+    <div className="wrappeer">
+      <TodoHeader todos={todos} addTodo={addTodo} />
+      <TodoList todos={todos} removeTodo={removeTodo} editTodo={editTodo} />
+    </div>
   );
 }
 

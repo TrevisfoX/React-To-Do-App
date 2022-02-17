@@ -1,23 +1,22 @@
-
 .form {
-    display: flex;
-    column-gap: 1em;
-    justify-content: space-between;
-    padding: 0.5em 0;
+  display: flex;
+  column-gap: 1em;
+  justify-content: space-between;
+  padding: 0.5em 0;
 
-    * {
-        padding: 0.5em;
-        outline: 0 !important;
-    }
+  * {
+    padding: 0.5em;
+    outline: 0 !important;
+  }
 
-    .input {
-        width: 80%;
-        border-radius: 5px;
-        border: none;
-    }
+  .input {
+    width: 80%;
+    border-radius: 5px;
+    border: none;
+  }
 
-    .btn {
-        width: 100px;
-        background-color: #0d47a1;
-    }
+  .btn {
+    width: 100px;
+    background-color: #0d47a1;
+  }
 }
